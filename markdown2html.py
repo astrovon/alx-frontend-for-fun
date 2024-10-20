@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Markdown to HTML"""
+"""
+print(__import__("my_module").__doc__)
+"""
 
 import sys
 import os.path
