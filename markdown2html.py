@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-python script  for storing the markdown to html script.
+Markdown to html.
 """
 from sys import argv, stderr
 from os.path import exists
@@ -11,7 +11,7 @@ from time import sleep
 
 def h(line):
     """
-    functions thats Creates a heading html element.
+    Creates a heading html element...
     <h1..6>...</h1..6}>
     """
     line = line.replace("\n", "")
@@ -28,7 +28,7 @@ def h(line):
     if len(parse_space[-1]) == parse_space[-1].count("#"):
         parse_space = parse_space[0:-1]
 
-    # Concatenates the content string.
+    # Add the content string.
     content = ""
     for word in parse_space[1:]:
         content += word + " "
@@ -39,14 +39,14 @@ def h(line):
 
 def li(line, flags):
     """
-    fucntion thats Creates a list item html element.
+     Creates a list 
     <li>...</li>
     """
     line = line.replace("\n", "")
     line = line.strip()
     parse_space = line.split(" ")
 
-    # Concatenates the content string.
+    # Adds the content string.
     content = ""
     for word in parse_space[1:]:
         content += word + " "
@@ -89,7 +89,7 @@ def clean_line(line):
 
 def mark2html(*argv):
     """
-    python  method to parse and process markdown to html.
+    Parse and process markdown to html.
     """
     inputFile = argv[1]
     ouputFile = argv[2]
@@ -186,7 +186,9 @@ def perror(*args, **kwargs):
 
 
 if __name__ == "__main__":
-    """functions thats main entry point."""
+    """
+    main entry point.
+    """
 
     if len(argv) < 3:
         perror("Usage: ./markdown2html.py README.md README.html")
