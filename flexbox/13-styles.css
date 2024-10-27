@@ -5,8 +5,6 @@
  *                 4. CARD
  *                 */
 
-/*fixes*?*/
-
 /*** 1. GLOBAL ***/
 
 /* Reset / Normalize
@@ -124,76 +122,93 @@ html {
 																																																												      progress {
 																																																													          vertical-align: baseline;
 																																																														    }
-																																																														      
-																																																														      .card-work .card-title a {
-																																																															          display: block;
-																																																																      text-decoration: none;
-																																																																          padding-top: 45%;
-																																																																	    }
-																																																																	      
-																																																																	      .card-work .card-title a::after {
-																																																																		          position: absolute;
-																																																																			      top: 0;
-																																																																			          left: 0;
-																																																																				      right: 0;
-																																																																				          bottom: 0;
-																																																																					      content: "";
-																																																																					        }
-																																																																						  
-																																																																						  .card-work:hover .card-title {
-																																																																							      opacity: 1;
+																																																														      textarea {
+																																																															          overflow: auto;
+																																																																    }
+																																																																      [type="checkbox"],
+																																																																        [type="radio"] {
+																																																																		    box-sizing: border-box;
+																																																																		        padding: 0;
+																																																																			  }
+																																																																			    [type="number"]::-webkit-inner-spin-button,
+																																																																			      [type="number"]::-webkit-outer-spin-button {
+																																																																				          height: auto;
+																																																																					    }
+																																																																					      [type="search"] {
+																																																																						          -webkit-appearance: textfield;
+																																																																							      outline-offset: -2px;
 																																																																							        }
-																																																																								  
-																																																																								  /* Card SERVICES
-																																																																								   *         ============================= */
+																																																																								    align-items: center;
+																																																																								        min-height: 40vh;
+																																																																									  }
+																																																																									    
+																																																																									    .hero-article .section-body {
+																																																																										        position: relative;
+																																																																											    padding: 7rem 0 0;
+																																																																											        z-index: 2;
+																																																																												  }
+																																																																												    
+																																																																												    .main-article {
+																																																																													        padding: 5rem 0;
+																																																																														  }
+																																																																														    
+																																																																														    /* Post
+																																																																														     *       ============================= */
   
-  .card-services .card-title {
-	      margin: 0;
+  .post {
+	      display: flex;
 	        }
 		  
-		  .card-services a {
-			      display: block;
-			          padding: 2rem;
-				      background-color: var(--color-light-grey);
-				        }
-					  
-					  .card-services a:hover {
-						      color: var(--color-white);
-						          background: var(--color-primary);
-							      text-decoration: none;
-							          transition-duration: 0.3s;
-								      transition-property: color, background-color;
-								        }
-									  
-									  /* Card TESTIMONIAL
-									   *         ============================= */
+		  .post-content {
+			      width: 100%;
+			        }
+				  
+				  .post-aside {
+					      order: -1;
+					          min-width: 20%;
+						    }
+						      
+						      /* Post Meta
+						       *       ============================= */
   
-  .card-testimonial {
-	      text-align: center;
+  .post-meta-list {
+	      flex-direction: column;
 	        }
 		  
-		  .card-testimonial .card-avatar {
-			      border-radius: 50%;
-			          width: 10rem;
-				      height: 10rem;
-				        }
-					  
-					  .card-testimonial .card-quote cite {
-						      display: block;
-						          padding-top: 1rem;
-							      color: var(--color-primary);
-							        }
-								  
-								  .card-testimonial .card-quote {
-									      position: relative;
-									        }
-										  
-										  .card-testimonial .card-quote::before {
-											      content: "\201C";
-											          position: absolute;
-												      top: -4.5rem;
-												          left: -1rem;
-													      color: #efeded;
-													          font-size: 10rem;
-														      z-index: -1;
-														        }
+		  .post-meta-list strong {
+			      color: var(--color-primary);
+			          font-size: var(--font-size-small);
+				      text-transform: uppercase;
+				          display: block;
+					    }
+					      
+					      .post-meta-list [class*="post-meta"] {
+						          margin-bottom: 1rem;
+							      padding-bottom: 1rem;
+							          border-bottom: 0.2rem solid var(--color-light-grey);
+								    }
+								      
+								      .post-meta-list [class*="post-meta"]:last-child {
+									          border: none;
+										      margin-bottom: 3rem;
+										        }
+											  
+											  /* Tag list
+											   *       ============================= */
+  
+  .tag-list {
+	      padding: 0;
+	          list-style: none;
+		    }
+		      
+		      .tag-list li {
+			          display: inline;
+				    }
+				      
+				      .tag-list li::after {
+					          content: ", ";
+						    }
+						      
+						      .tag-list li:last-child::after {
+							          content: "";
+								    }

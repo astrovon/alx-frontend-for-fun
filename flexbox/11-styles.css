@@ -5,8 +5,6 @@
  *                 4. CARD
  *                 */
 
-/*fixes*?*/
-
 /*** 1. GLOBAL ***/
 
 /* Reset / Normalize
@@ -124,49 +122,33 @@ html {
 																																																												      progress {
 																																																													          vertical-align: baseline;
 																																																														    }
-																																																														      
-																																																														      .card-work .card-title a {
-																																																															          display: block;
-																																																																      text-decoration: none;
-																																																																          padding-top: 45%;
-																																																																	    }
-																																																																	      
-																																																																	      .card-work .card-title a::after {
-																																																																		          position: absolute;
-																																																																			      top: 0;
-																																																																			          left: 0;
-																																																																				      right: 0;
-																																																																				          bottom: 0;
-																																																																					      content: "";
-																																																																					        }
-																																																																						  
-																																																																						  .card-work:hover .card-title {
-																																																																							      opacity: 1;
+																																																														      textarea {
+																																																															          overflow: auto;
+																																																																    }
+																																																																      [type="checkbox"],
+																																																																        [type="radio"] {
+																																																																		    box-sizing: border-box;
+																																																																		        padding: 0;
+																																																																			  }
+																																																																			    [type="number"]::-webkit-inner-spin-button,
+																																																																			      [type="number"]::-webkit-outer-spin-button {
+																																																																				          height: auto;
+																																																																					    }
+																																																																					      [type="search"] {
+																																																																						          -webkit-appearance: textfield;
+																																																																							      outline-offset: -2px;
 																																																																							        }
 																																																																								  
-																																																																								  /* Card SERVICES
-																																																																								   *         ============================= */
-  
-  .card-services .card-title {
-	      margin: 0;
-	        }
-		  
-		  .card-services a {
-			      display: block;
-			          padding: 2rem;
-				      background-color: var(--color-light-grey);
-				        }
-					  
-					  .card-services a:hover {
-						      color: var(--color-white);
-						          background: var(--color-primary);
-							      text-decoration: none;
-							          transition-duration: 0.3s;
-								      transition-property: color, background-color;
-								        }
-									  
-									  /* Card TESTIMONIAL
-									   *         ============================= */
+																																																																								  .card-services a:hover {
+																																																																									      color: var(--color-white);
+																																																																									          background: var(--color-primary);
+																																																																										      text-decoration: none;
+																																																																										          transition-duration: 0.3s;
+																																																																											      transition-property: color, background-color;
+																																																																											        }
+																																																																												  
+																																																																												  /* Card TESTIMONIAL
+																																																																												   *         ============================= */
   
   .card-testimonial {
 	      text-align: center;
@@ -197,3 +179,36 @@ html {
 													          font-size: 10rem;
 														      z-index: -1;
 														        }
+															  
+															  /*** ARTICLE PAGE ***/
+															  
+															  /* Section HERO (article)
+															   *       ============================= */
+  
+  .hero-article {
+	      background-size: 150rem 100rem;
+	          background-position: 50% 0;
+		    }
+		      
+		      .hero-article::before {
+			          content: "";
+				      background: rgba(0, 0, 0, 0.8);
+				          position: absolute;
+					      top: 0;
+					          right: 0;
+						      left: 0;
+						          bottom: 0;
+							      z-index: 0;
+							        }
+								  
+								  .hero-article .section-inner {
+									      text-align: center;
+									          align-items: center;
+										      min-height: 40vh;
+										        }
+											  
+											  .hero-article .section-body {
+												      position: relative;
+												          padding: 7rem 0 0;
+													      z-index: 2;
+													        }
